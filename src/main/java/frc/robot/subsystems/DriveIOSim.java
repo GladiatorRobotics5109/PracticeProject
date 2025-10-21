@@ -22,7 +22,7 @@ public class DriveIOSim implements DriveIO {
     }
 
     @Override
-    public void updateInputs(ExampleIOInputs inputs) {
+    public void updateInputs(DriveIOInputs inputs) {
         inputs.appliedVolts = m_sim.getInputVoltage();
 
         inputs.positionRad = m_sim.getAngularPositionRad();

@@ -11,11 +11,11 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
-import frc.robot.subsystems.DriveIO.ExampleIOInputs;
+import frc.robot.subsystems.DriveIO.DriveIOInputs;
 
 public class DriveSubsystem extends SubsystemBase {
   private final DriveIO m_io;
-  private final ExampleIOInputsAutoLogged m_inputs;
+  // private final DriveIOInputsAutoLogged m_inputs;
 
   /** Creates a new ExampleSubsystem. */
   public DriveSubsystem() {
@@ -32,7 +32,7 @@ public class DriveSubsystem extends SubsystemBase {
         m_io = new DriveIO() {};
     }
 
-    m_inputs = new ExampleIOInputsAutoLogged();
+    // m_inputs = new DriveIOInputsAutoLogged();
   }
 
   public void setVoltage(double volts) {
@@ -43,10 +43,10 @@ public class DriveSubsystem extends SubsystemBase {
   public void periodic() {
     // This method will be called once per scheduler run
     m_io.periodic();
-    m_io.updateInputs(m_inputs);
-    Logger.processInputs("ExampleSubsystemInputs", m_inputs);
+    // m_io.updateInputs(m_inputs);
+    // Logger.processInputs("ExampleSubsystemInputs", m_inputs);
 
-    Logger.recordOutput("CurrentPosition", new Pose2d(0.1 * m_inputs.positionRad, 0.0, Rotation2d.kZero));
+    // Logger.recordOutput("CurrentPosition", new Pose2d(0.1 * m_inputs.positionRad, 0.0, Rotation2d.kZero));
   }
 
   @Override

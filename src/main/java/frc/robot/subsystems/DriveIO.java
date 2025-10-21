@@ -4,7 +4,7 @@ import org.littletonrobotics.junction.AutoLog;
 
 public interface DriveIO {
     @AutoLog
-    public static class ExampleIOInputs {
+    public static class DriveIOInputs {
         public double appliedVolts;
 
         public double positionRad;
@@ -12,7 +12,7 @@ public interface DriveIO {
         public double accelerationRadPerSecSq;
     }
 
-    default void updateInputs(ExampleIOInputs inputs) {};
+    default void updateInputs(DriveIOInputs inputs) {};
 
     default void setVoltage(double volts) {};
 

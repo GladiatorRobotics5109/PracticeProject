@@ -10,6 +10,12 @@ java {
 
 def ROBOT_MAIN_CLASS = "frc.robot.Main"
 
+repositories {
+    maven {
+        url = uri("https://frcmaven.wpi.edu/artifactory/littletonrobotics-mvn-release")
+    }
+}
+
 // Define my targets (RoboRIO) and artifacts (deployable files)
 // This is added by GradleRIO's backing project DeployUtils.
 deploy {
